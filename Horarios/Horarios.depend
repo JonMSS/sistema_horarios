@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1531594345 source:/home/jonny/Documentos/Servicio_social/Proyecto/Horarios/main.c
+	<stdio.h>
+	<stdlib.h>
+	"archivos_csv.h"
+	"colas.h"
+	"ordenacion.h"
+	"asignacion.h"
+
+1532143365 /home/jonny/Documentos/Servicio_social/Proyecto/Horarios/archivos_csv.h
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"memoria_dinamica.h"
+	"estructuras.h"
+	"matrices_vectores.h"
+	"colas.h"
+	"asignacion.h"
+
+1529182504 /home/jonny/Documentos/Servicio_social/Proyecto/Horarios/memoria_dinamica.h
+
+1532143301 /home/jonny/Documentos/Servicio_social/Proyecto/Horarios/estructuras.h
+
+1531607107 /home/jonny/Documentos/Servicio_social/Proyecto/Horarios/colas.h
+
+1520479577 source:/home/jonny/Documentos/Servicio_social/Proyecto/Horarios/binpacking.c
+
+1531607794 /home/jonny/Documentos/Servicio_social/Proyecto/Horarios/ordenacion.h
+
+1523505789 /home/jonny/Documentos/Servicio_social/Proyecto/Horarios/matrices.h
+
+1532151234 /home/jonny/Documentos/Servicio_social/Proyecto/Horarios/asignacion.h
+
+1531607833 /home/jonny/Documentos/Servicio_social/Proyecto/Horarios/matrices_vectores.h
+
