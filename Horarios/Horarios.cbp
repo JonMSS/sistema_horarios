@@ -41,7 +41,7 @@
 		<Unit filename="matrices_vectores.h" />
 		<Unit filename="memoria_dinamica.h" />
 		<Unit filename="ordenacion.h" />
-		<Unit filename="rutas_archivos">
+		<Unit filename="rutas_csv">
 			<Option target="Release" />
 		</Unit>
 		<Extensions>

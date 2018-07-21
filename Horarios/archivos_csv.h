@@ -72,7 +72,7 @@ void leer_rutas()
 {
     int error=0;
     printf("\nVariables de rutas a archivos (ver archivo rutas_archivos)\n");
-    abrir_archivo("../rutas_archivos.txt","r");
+    abrir_archivo("rutas_csv","r");
     error=leer_cadena_archivo(&ruta_cursos_csv,f);
     printf("\nruta_cursos_csv: %s",ruta_cursos_csv);
     error=leer_cadena_archivo(&ruta_profesores_csv,f);
