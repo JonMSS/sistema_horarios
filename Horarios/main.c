@@ -4,12 +4,7 @@
 #include "colas.h"
 #include "ordenacion.h"
 #include "asignacion.h"
-/*
-char ruta_cursos_csv[]="/home/jonny/Documentos/Servicio_social/Proyecto/cursos.csv";
-char ruta_profesores_csv[]="/home/jonny/Documentos/Servicio_social/Proyecto/profesores.csv";
-char ruta_prof_cursos_csv[]="/home/jonny/Documentos/Servicio_social/Proyecto/prof_cursos.csv";
-char ruta_horario_csv[]="/home/jonny/Documentos/Servicio_social/Proyecto/horario.csv";
-*/
+
 int main()
 {
     int i;
