@@ -76,12 +76,10 @@ int main()
     asig_prof_c();
     imprimir_matriz(PC,m_prof,n_cursos,0);
     printf("\n pc_ij=-1: profesor i-esimo no puede impartir curso j-esimo\n");
-    printf("\n pc_ij=0: profesor i-esimo puede impartir curso j-esimo\n");
+    printf("\n pc_ij=0: profesor i-esimo es candidato para impartir curso j-esimo\n");
     printf("\n pc_ij>0: profesor i-esimo impartira pc_ij cursos j-esimo\n");
-    getchar();
-    getchar();
     printf("\nASIGNACION DE HORARIOS FINAL\n");
-    asignar_horario1();
+    asignar_horario();
     imprimir_horarios(primero_h);
     crear_horario_csv(primero_h);
     return 0;

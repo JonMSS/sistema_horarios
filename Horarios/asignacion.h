@@ -20,7 +20,6 @@ int menor(int a[], int n)
             }//if
         }//if
         i++;
-        printf("\nmenor=%d\n",menor);
     }//while
     return menor;
 }
@@ -179,10 +178,9 @@ int espacio(int **D, int **H, int i, int j)
 //tiene espacio mayor al necesario (<=4) que se puede considerar para asignar en caso de que los demas dias
 //no tengan el espacio necesario exacto, es decir, flexibiliza el criterio de asignar en dias con espacio exacto
 //int **D_aux: matriz que contiene las restricciones de disponibilidad por dia y por horas del profesor k_p
-void asignar_horario1()
+void asignar_horario()
 {
     int i=0, d=0,t,l,g,k_c=0,k_p=0,k_c_aux, horas,horas_asig=0, tam_max,tam=0, asigno=0, control_horas[]={0,0,0,0,0},**D_aux;
-    printf("\nASIGNAR1\n");
     for(t=0;t<n_trim;t++)//asignamos para cada trimestre
     {
         k_c_aux=k_c;//se guarda el inicio del trimestre
