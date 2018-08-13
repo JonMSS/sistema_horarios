@@ -1,9 +1,12 @@
 #ifndef ASIGNACION_H
 #define ASIGNACION_H
 
-//Funcion que devuelve el indice del primer elemento mas pequeno mayor a cero
-//int i: contador
-//int menor: indice del primer elemento mas pequeno
+/*
+* DESCRIPCION
+* Funcion que devuelve el indice del primer elemento mas pequeno mayor a cero
+* int i: contador
+* int menor: indice del primer elemento mas pequeno
+*/
 int menor(int a[], int n)
 {
     int i=0, menor=-1;
@@ -24,11 +27,14 @@ int menor(int a[], int n)
     return menor;
 }
 
-//Procedimiento que asigna los cursos del trimestre t a los profesores de tal menera que todos los profesores en P tengan la misma
-//cantidad de cursos
-//int n_pc[n_cursos]: vector de n_cursos (ver estructuras.h) elementos que contiene la cantidad de profesores que podrían impartir cada curso
-//int gc[n_cursos]: vector de n_cursos (ver estructuras.h) elementos que contiene la cantidad de grupos por cada curso
-//int p[m_prof]: vector de m_prof (ver estructuras.h) elementos que contiene la cantidad de cursos que se le van asignando a cada profesor
+/*
+* DESCRIPCION
+* Procedimiento que asigna los cursos del trimestre t a los profesores de tal menera que todos los profesores en P tengan la misma
+  cantidad de cursos
+* int n_pc[n_cursos]: vector de n_cursos (ver estructuras.h) elementos que contiene la cantidad de profesores que podrían impartir cada curso
+* int gc[n_cursos]: vector de n_cursos (ver estructuras.h) elementos que contiene la cantidad de grupos por cada curso
+* int p[m_prof]: vector de m_prof (ver estructuras.h) elementos que contiene la cantidad de cursos que se le van asignando a cada profesor
+*/
 void asig_prof_c()
 {
     int i,j=0,k=0, l=0, gc[n_cursos], n_pc[n_cursos], p[m_prof], prof=-1,sum=0;
@@ -96,7 +102,10 @@ void asig_prof_c()
     }//while
 }
 
-//Funcion que busca  en la matriz PC (ver estructuras.h) uno de los profesores asignados al curso index_curso
+/*
+* DESCRIPCION
+* Funcion que busca en la matriz PC (ver estructuras.h) uno de los profesores asignados al curso index_curso
+*/
 int buscar_asignacion_PC(int index_curso)
 {
     int i;
@@ -112,7 +121,10 @@ int buscar_asignacion_PC(int index_curso)
     return -1;
 }
 
-//Metodo que restaura la matriz PC (ver estructuras.h) a su estado de solo asignacion profesor-curso (matriz de 1)
+/*
+* DESCRIPCION
+* Metodo que restaura la matriz PC (ver estructuras.h) a su estado de solo asignacion profesor-curso (matriz de 1)
+*/
 void restaurar_PC()
 {
     int i,j;
@@ -126,6 +138,9 @@ void restaurar_PC()
     }//for
 }
 
+/*
+* DESCRIPCION
+*/
 void obtener_D_prof(int index_prof, struct profesor *primero, int ***ptr_H)
 {
     int i=0;
@@ -143,7 +158,10 @@ void obtener_D_prof(int index_prof, struct profesor *primero, int ***ptr_H)
     }
 }
 
-//Funcion que devuelve el espacio disponible (para las matrices D y H al mismo tiempo) a partir de la fila (hora) i en la columna j (dia)
+/*
+* DESCRIPCION
+* Funcion que devuelve el espacio disponible (para las matrices D y H al mismo tiempo) a partir de la fila (hora) i en la columna j (dia)
+*/
 int espacio(int **D, int **H, int i, int j)
 {
     int sum=0;
@@ -159,25 +177,27 @@ int espacio(int **D, int **H, int i, int j)
     return sum;
 }
 
-
-//int d: contador de dias en el horario (dia=0,1,2,3 y 4)
-//int i: contador para las horas en un determinado dia
-//int t: contador de trimestres
-//int l: contador de cursos por trimestre (l<info_trim[2][t])
-//int g: contador de grupos por trimestre
-//int k_c: indice del curso C[0][k_c]
-//int k_p: indice del profesor P[k_p]
-//int k_c_aux: variable auxiliar para guardar el indice del primer curso correspondiente al trimestre t
-//(necesario en caso de que un trimestre tenga más de un grupo)
-//int horas: guarda la cantidad de horas totales (al inicio) para cada curso o la cantidad de horas de cada curso que faltan por asignar
-//int horas_asig: cuenta las horas que se han asignado en un dia para un curso
-//int tam_max: es la cantidad maxima (3 o 2) de horas que se pueden asignar por dia a cada curso
-//int asigno: (0 o 1) indica con 1 que se ha asignado horas de un curso en un dia, 0 si no.
-//Sirve para no asignar horas de un curso en dias consecutivos
-//int contro_horas[5]: (0 o 1) lleva el control del espacio disponible en un dia para un curso, 1 indica si un dia
-//tiene espacio mayor al necesario (<=4) que se puede considerar para asignar en caso de que los demas dias
-//no tengan el espacio necesario exacto, es decir, flexibiliza el criterio de asignar en dias con espacio exacto
-//int **D_aux: matriz que contiene las restricciones de disponibilidad por dia y por horas del profesor k_p
+/*
+* DESCRIPCION
+* int d: contador de dias en el horario (dia=0,1,2,3 y 4)
+* int i: contador para las horas en un determinado dia
+* int t: contador de trimestres
+* int l: contador de cursos por trimestre (l<info_trim[2][t])
+* int g: contador de grupos por trimestre
+* int k_c: indice del curso C[0][k_c]
+* int k_p: indice del profesor P[k_p]
+* int k_c_aux: variable auxiliar para guardar el indice del primer curso correspondiente al trimestre t
+  (necesario en caso de que un trimestre tenga más de un grupo)
+* int horas: guarda la cantidad de horas totales (al inicio) para cada curso o la cantidad de horas de cada curso que faltan por asignar
+* int horas_asig: cuenta las horas que se han asignado en un dia para un curso
+* int tam_max: es la cantidad maxima (3 o 2) de horas que se pueden asignar por dia a cada curso
+* int asigno: (0 o 1) indica con 1 que se ha asignado horas de un curso en un dia, 0 si no.
+* Sirve para no asignar horas de un curso en dias consecutivos
+* int contro_horas[5]: (0 o 1) lleva el control del espacio disponible en un dia para un curso, 1 indica si un dia
+  tiene espacio mayor al necesario (<=4) que se puede considerar para asignar en caso de que los demas dias
+* no tengan el espacio necesario exacto, es decir, flexibiliza el criterio de asignar en dias con espacio exacto
+* int **D_aux: matriz que contiene las restricciones de disponibilidad por dia y por horas del profesor k_p
+*/
 void asignar_horario()
 {
     int i=0, d=0,t,l,g,k_c=0,k_p=0,k_c_aux, horas,horas_asig=0, tam_max,tam=0, asigno=0, control_horas[]={0,0,0,0,0},**D_aux;

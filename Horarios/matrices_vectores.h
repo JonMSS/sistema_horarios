@@ -1,5 +1,8 @@
 //FUNCIONES PARA VECTORES Y MATRICES
 
+/*
+* DESCRIPCION
+*/
 void inicializar_matriz(int **A, int n, int m, int a)
 {
     int i,j;
@@ -12,6 +15,9 @@ void inicializar_matriz(int **A, int n, int m, int a)
     }
 }
 
+/*
+* DESCRIPCION
+*/
 void inicializar_vector(int *v, int n, int a)
 {
     int i;
@@ -21,6 +27,9 @@ void inicializar_vector(int *v, int n, int a)
     }
 }
 
+/*
+* DESCRIPCION
+*/
 int buscar_en_vector(int *v, int n, int a)
 {
     int i;
@@ -32,6 +41,9 @@ int buscar_en_vector(int *v, int n, int a)
     return -1;
 }
 
+/*
+* DESCRIPCION
+*/
 void imprimir_matriz(int **A, int n, int m, int formato)
 {
     int i,j;
@@ -52,6 +64,9 @@ void imprimir_matriz(int **A, int n, int m, int formato)
     }
 }
 
+/*
+* DESCRIPCION
+*/
 void imprimir_vector(int *v, int n)
 {
     int i;

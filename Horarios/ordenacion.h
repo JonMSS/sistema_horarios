@@ -1,10 +1,12 @@
-
-//Procedimiento que ordena la matriz C en orden descendente respecto a las horas de cada curso mediante el algoritmo shell
-//int **A: matriz de 2xn para ordenar pespecto a la 2da fila
-//int intervalo: define el tamano de las particiones
-//int n: igual a n_cursos
-//int i,j,k: contadores
-//int aux_c, aux_h: auxiliares para intercambiar los valores en la matriz C
+/*
+* DESCRIPCION
+* Procedimiento que ordena la matriz C en orden descendente respecto a las horas de cada curso mediante el algoritmo shell
+* int **A: matriz de 2xn para ordenar pespecto a la 2da fila
+* int intervalo: define el tamano de las particiones
+* int n: igual a n_cursos
+* int i,j,k: contadores
+* int aux_c, aux_h: auxiliares para intercambiar los valores en la matriz C
+*/
 void shell_cursos(int **A, int n)
 {
     int intervalo, i,j,k, aux_c, aux_h;
@@ -38,14 +40,17 @@ void shell_cursos(int **A, int n)
     }//while
 }
 
-//Procedimiento que extrae los cursos de cada trimestre guardados en la matriz C para ordenarlos usando shell_cursos
-//int **aux: es una matrix auxiliar que guarda los datos de los cursos de un determinado trimestre
-//int n_trim: cantidad de trimestres, definida en estructuras.h
-//int info_trim: matriz de 3xn_trim, con informacion de los trimestres, definida en estructuras.h
-//int i: contador de trimestres (<n_trim)
-//int j: contador de cursos (<n_cursos)
-//int k: contador de cursos (k<=j<n_cursos)
-//int l: contador de cursos por trimestre (l<info_trim[2][i])
+/*
+* DESCRIPCION
+* Procedimiento que extrae los cursos de cada trimestre guardados en la matriz C para ordenarlos usando shell_cursos
+* int **aux: es una matrix auxiliar que guarda los datos de los cursos de un determinado trimestre
+* int n_trim: cantidad de trimestres, definida en estructuras.h
+* int info_trim: matriz de 3xn_trim, con informacion de los trimestres, definida en estructuras.h
+* int i: contador de trimestres (<n_trim)
+* int j: contador de cursos (<n_cursos)
+* int k: contador de cursos (k<=j<n_cursos)
+* int l: contador de cursos por trimestre (l<info_trim[2][i])
+*/
 void ordenar_cursos()
 {
     int **aux,i,j=0,k=0,l;

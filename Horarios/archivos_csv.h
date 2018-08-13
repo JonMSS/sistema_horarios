@@ -13,11 +13,11 @@ FILE* f; //apuntador global a archivo, sirve para manipular varios archivos por 
 * struct curso: estructura donde se guardan los datos de cada curso.
 * struct profesor: estructura donde se guardan los datos de cada profesor
 * int n_cursos: variable para contar la cantidad de cursos total; n_cursos
-* es variable global para el proyecto.
+  es variable global para el proyecto.
 * int *P: vector P m_prof elementos de profesores.
 * int **C: matriz C de 2xn_cursos de cursos.
 * int **PC: matriz PC m_profxn_cursos de relaciones de profesores con cursos
-* (p_ij=-1, no hay relacion; p_ij=0, profesor i puede impartir curso j; p_ij=1, profesor i impartira curso j).
+  (p_ij=-1, no hay relacion; p_ij=0, profesor i puede impartir curso j; p_ij=1, profesor i impartira curso j).
 */
 
 /*
@@ -75,7 +75,7 @@ int tamano_cadena_leer(FILE* archivo)
 /*
 * DESCRIPCION
 * Funcion que lee una linea completa del archivo al apunta FILE *f
-* y lo guarda en la cadena a la que apunta char **s
+  y lo guarda en la cadena a la que apunta char **s
 * ---------------------------------------------------------------------------------------
 * DATOS
 * char **s: apuntador a la cadena de tamano n donde se guardara una linea del archivo *f
@@ -102,7 +102,7 @@ int leer_cadena_archivo(char **s, FILE *f)
 /*
 * DESCRIPCION
 * Procedimiento que lee desde el archivo rutas_archivo (esta dentro del proyecto) las rutas de los archivos csv que contienen los datos de los
-* cursos, profesores y la asignacion de los profesores a cursos
+  cursos, profesores y la asignacion de los profesores a cursos
 */
 void leer_rutas()
 {
@@ -132,7 +132,7 @@ void leer_rutas()
 * ---------------------------------------------------------------------------------------
 * DATOS
 * struct curso *c: apuntador a tipo struct curso donde se guardaran los datos del curso
-* leido desde el archivo .csv
+  leido desde el archivo .csv
 * int trim: trimestre de los cursos que se guardaran
 * char *s: cadena de tamano n perteneciente a una linea del archivo csv (*f)
 * char *ptr: puntero a subcadena de s delimitada por ","
@@ -225,7 +225,7 @@ void insertar_curso_cola(int trimestre)
 * ---------------------------------------------------------------------------------------
 * DATOS
 * struct curso *p: apuntador a tipo struct profesor donde se guardaran los datos del profesor
-* leido desde el archivo .csv
+  leido desde el archivo .csv
 * char *s: cadena de tamano n perteneciente a una linea del archivo csv (*f)
 * char *ptr: puntero a subcadena de s delimitada por ","
 * int n_prof: variable para contar la cantidad de profesores total; n_cursos es variable global en estructuras.h
@@ -316,7 +316,7 @@ void insertar_profesor_cola()
 * int *P: vector P m_prof elementos de profesores definida en estructuras.h
 * int **C: matriz C de 2xn_cursos de cursos definida en estructuras.h
 * int **PC: matriz PC m_profxn_cursos de relaciones de profesores con cursos
-* (p_ij=-1, no hay relacion; p_ij=0, profesor i puede impartir curso j; p_ij=1, profesor i impartira curso j).
+  (p_ij=-1, no hay relacion; p_ij=0, profesor i puede impartir curso j; p_ij=1, profesor i impartira curso j).
 */
 void leer_prof_cursos_csv()
 {
@@ -377,6 +377,8 @@ void formato_hora(int hora_i, char hora_s[6])
 /*
 * DESCRIPCION
 * Procemiento que asigna a horario[60] el horario completo de la semana de un curso guardado en la matriz de horarios H
+* ---------------------------------------------------------------------------------------
+* DATOS
 * ind d: contador para los dias de la semana
 * int h: cotador para las horas por dia
 * int inicio: indica el comienzo en horas de la imparticion de un curso
@@ -431,7 +433,7 @@ void horario_curso(char horario[60], int clave_curso, int **H)
 * int trim_aux: variable auxiliar para guardar un trimestre anterior al actual
 * char horario[60]: cadena para el horario de toda la semana de un curso
 * struct curso *curso: apuntador al curso (C[0][i_c]) actual
-* (necesario para descargar todos los datos del curso en el archivo .csv del horario)
+  (necesario para descargar todos los datos del curso en el archivo .csv del horario)
 * struct profesor *prof: apuntador al profesor (P[i_p]) que imparte el curso C[0][i_c]
 * int **C: matriz C de 2xn_cursos de cursos definida en estructuras.h
 */
