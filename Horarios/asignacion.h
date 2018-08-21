@@ -45,12 +45,12 @@ void asig_prof_c()
     inicializar_vector(p,m_prof,0); //inicializa el vector p con ceros
     for(i=0;i<n_cursos;i++) //cantidad de grupos por curso
     {
-        if(l==info_trim[2][j]) //l llego al final del trimestre info_trim[0][j], avanzamos al trimestre info_trim[0][j+1]
+        if(l==T[2][j]) //l llego al final del trimestre T[0][j], avanzamos al trimestre T[0][j+1]
         {
             j++; //avanza al siguiente trimestre
             l=0; //empieza con el primer elemento del siguiente trimestre
         }
-        gc[i]=info_trim[1][j]; //guarda la cantidad de cursos en total (depende de la cantidad de grupos)
+        gc[i]=T[1][j]; //guarda la cantidad de cursos en total (depende de la cantidad de grupos)
         l++;
     }//for
     printf("\nVector gc\n");
@@ -193,7 +193,7 @@ int espacio(int **D, int **H, int i, int j)
 * int d: contador de dias en el horario (dia=0,1,2,3 y 4)
 * int i: contador para las horas en un determinado dia
 * int t: contador de trimestres
-* int l: contador de cursos por trimestre (l<info_trim[2][t])
+* int l: contador de cursos por trimestre (l<T[2][t])
 * int g: contador de grupos por trimestre
 * int k_c: indice del curso C[0][k_c]
 * int k_p: indice del profesor P[k_p]
@@ -215,16 +215,16 @@ void asignar_horario()
     for(t=0;t<n_trim;t++)//asignamos para cada trimestre
     {
         k_c_aux=k_c;//se guarda el inicio del trimestre
-        for(g=0;g<info_trim[1][t];g++)//asignamos para cada grupo en cada trimestre
+        for(g=0;g<T[1][t];g++)//asignamos para cada grupo en cada trimestre
         {
             struct horario *nuevo;
             nuevo=(struct horario*)malloc(sizeof(struct horario)); //creamos nuevo horario
             memoria_matriz_int(&(nuevo->H),6,5); //asignamos memoria a la matriz de horario
             inicializar_matriz(nuevo->H,6,5,0); //inicializamos la matriz H con ceros
-            nuevo->trimestre=t; //guardamos el indice del trimestre info_trim[0][t]
+            nuevo->trimestre=t; //guardamos el indice del trimestre T[0][t]
             k_c=k_c_aux; //si hay más de un grupo, comenzamos en el inicio del conjunto de cursos para el trimestre t
             l=0;
-            while(k_c<n_cursos && l<info_trim[2][t])
+            while(k_c<n_cursos && l<T[2][t])
             {
                 printf("\nAsignando para CURSO: %d\n",k_c);
                 horas=C[1][k_c]; //guardamos las horas que deben satisfacer el c-esimo curso

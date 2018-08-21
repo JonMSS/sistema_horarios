@@ -1,8 +1,16 @@
 #ifndef ESTRUCTURAS_H
 #define ESTRUCTURAS_H
-int **C=NULL; //Matriz de cursos de 2xn_cursos; c_0,i son las claves de los cursos y c_1,i son las horas de cada curso
-int *P=NULL; //Vector de profesores de longitud m_prof
-int **info_trim=NULL; //Matriz de 3xn_trim con informacion de cada trimestre; info_trim[0][i]: trimestres, info_trim[1][i]: grupos por trimestre, info_trim[2][i]: cantidad de cursos por trimestre
+
+/*
+* int **C: Matriz de cursos de 2xn_cursos; c_0,i son las claves de los cursos y c_1,i son las horas de cada curso
+* int *P: Vector de profesores (solo claves) de longitud m_prof
+* int **T: Matriz de 3xn_trim con informacion de cada trimestre; T[0][i]: trimestres,
+  T[1][i]: informacion de grupos por trimestre, T[2][i]: cantidad de cursos por trimestre
+*
+*/
+int **C=NULL; //
+int *P=NULL; //
+int **T=NULL; //
 int **PC=NULL; //Matriz con la asignacion de profesores a cursos, -1 significa sin asignacion, 0 que es candidato a impartir el curso y 1 que impartira el curso
 
 int n_cursos=0; //cantidad de cursos
@@ -36,7 +44,7 @@ struct profesor
 
 struct horario
 {
-    int trimestre; //indice del trimestre en la matriz info_trim
+    int trimestre; //indice del trimestre en la matriz T
     int **H; //matriz de horarios de tamano numero de horas por dias (5)
     struct horario *siguiente;
 }*primero_h=NULL, *ultimo_h=NULL;

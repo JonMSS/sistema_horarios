@@ -14,7 +14,8 @@ FILE* f; //apuntador global a archivo, sirve para manipular varios archivos por 
 * struct profesor: estructura donde se guardan los datos de cada profesor
 * int n_cursos: variable para contar la cantidad de cursos total; n_cursos
   es variable global para el proyecto.
-* int *P: vector P m_prof elementos de profesores.
+* int
+* int *P: vector P de m_prof elementos de profesores.
 * int **C: matriz C de 2xn_cursos de cursos.
 * int **PC: matriz PC m_profxn_cursos de relaciones de profesores con cursos
   (p_ij=-1, no hay relacion; p_ij=0, profesor i puede impartir curso j; p_ij=1, profesor i impartira curso j).
@@ -453,13 +454,13 @@ void crear_horario_csv(struct horario *prim_h)
     {
         while(prim_h!=NULL)
         {
-            fprintf(f,"%d\n",info_trim[0][prim_h->trimestre]);
+            fprintf(f,"%d\n",T[0][prim_h->trimestre]);
             fprintf(f,"%s\n",head_t);
             if(trim_aux==prim_h->trimestre)
                 i_c=k;
             k=i_c; //si hay más de un grupo, comenzamos en el inicio del conjunto de cursos para el trimestre prim_h->trimestre
             l=0;
-            while(i_c<n_cursos && l<info_trim[2][prim_h->trimestre])
+            while(i_c<n_cursos && l<T[2][prim_h->trimestre])
             {
                 buscar_curso_cola(C[0][i_c],primero_c,&curso);
                 i_p=buscar_asignacion_PC(i_c);

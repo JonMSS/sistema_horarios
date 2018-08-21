@@ -11,15 +11,15 @@ int main()
     leer_rutas();
     printf("\n\nIntroduzca la cantidad de trimestres que desea programar\n");
     scanf("%d",&n_trim);
-    memoria_matriz_int(&info_trim,3,n_trim);
+    memoria_matriz_int(&T,3,n_trim);
 
     printf("\nIntroduzca a continuación los trimestres\n");
     for(i=0;i<n_trim;i++)
     {
         printf("\nTrimestre: ");
-        scanf("%d",&info_trim[0][i]);
+        scanf("%d",&T[0][i]);
         printf("¿Cuantos grupos se programaran con materias de este trimestre? ");
-        scanf("%d",&info_trim[1][i]);
+        scanf("%d",&T[1][i]);
     }
 
     //Lectura de cursos desde el archivo csv
@@ -27,10 +27,10 @@ int main()
     for(i=0;i<n_trim;i++)
     {
         abrir_archivo(ruta_cursos_csv,"r");
-        printf("\nAgregando cursos del trimestre %d\n",info_trim[0][i]);
-        insertar_curso_cola(info_trim[0][i]);
-        info_trim[2][i]=n_cursos;//cursos por trimestre
-        printf("\nNumero de cursos del trimestre %d: %d\n",info_trim[0][i],info_trim[2][i]);
+        printf("\nAgregando cursos del trimestre %d\n",T[0][i]);
+        insertar_curso_cola(T[0][i]);
+        T[2][i]=n_cursos;//cursos por trimestre
+        printf("\nNumero de cursos del trimestre %d: %d\n",T[0][i],T[2][i]);
         cerrar_archivo();
     }
     printf("\nCursos\n");

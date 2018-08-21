@@ -157,7 +157,7 @@ void imprimir_horarios(struct horario *primero)
     {
         while(primero!=NULL)
         {
-            printf("\n Horario del trimestre %d \n",info_trim[0][primero->trimestre]);
+            printf("\n Horario del trimestre %d \n",T[0][primero->trimestre]);
             printf("\n          L        M        M        J        V\n");
             for(i=0;i<6;i++)
             {

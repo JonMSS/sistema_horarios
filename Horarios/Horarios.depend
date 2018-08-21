@@ -33,7 +33,7 @@
 
 1531607833 /home/jonny/Documentos/Servicio_social/Proyecto/Horarios/matrices_vectores.h
 
-1532203477 source:/home/jonny/GitHub/sistema_horarios/Horarios/main.c
+1534870810 source:/home/jonny/GitHub/sistema_horarios/Horarios/main.c
 	<stdio.h>
 	<stdlib.h>
 	"archivos_csv.h"
@@ -41,7 +41,7 @@
 	"ordenacion.h"
 	"asignacion.h"
 
-1534020770 /home/jonny/GitHub/sistema_horarios/Horarios/archivos_csv.h
+1534870703 /home/jonny/GitHub/sistema_horarios/Horarios/archivos_csv.h
 	<stdio.h>
 	<string.h>
 	<math.h>
@@ -53,13 +53,13 @@
 
 1529182504 /home/jonny/GitHub/sistema_horarios/Horarios/memoria_dinamica.h
 
-1532143301 /home/jonny/GitHub/sistema_horarios/Horarios/estructuras.h
+1534870815 /home/jonny/GitHub/sistema_horarios/Horarios/estructuras.h
 
-1534020444 /home/jonny/GitHub/sistema_horarios/Horarios/matrices_vectores.h
+1534820838 /home/jonny/GitHub/sistema_horarios/Horarios/matrices_vectores.h
 
-1534020800 /home/jonny/GitHub/sistema_horarios/Horarios/colas.h
+1534870656 /home/jonny/GitHub/sistema_horarios/Horarios/colas.h
 
-1534020833 /home/jonny/GitHub/sistema_horarios/Horarios/asignacion.h
+1534870832 /home/jonny/GitHub/sistema_horarios/Horarios/asignacion.h
 
-1534020591 /home/jonny/GitHub/sistema_horarios/Horarios/ordenacion.h
+1534870829 /home/jonny/GitHub/sistema_horarios/Horarios/ordenacion.h
 
