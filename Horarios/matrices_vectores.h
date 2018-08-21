@@ -2,6 +2,8 @@
 
 /*
 * DESCRIPCION
+* ---------------------------------------------------------------------------------------
+* DATOS
 */
 void inicializar_matriz(int **A, int n, int m, int a)
 {
@@ -17,6 +19,8 @@ void inicializar_matriz(int **A, int n, int m, int a)
 
 /*
 * DESCRIPCION
+* ---------------------------------------------------------------------------------------
+* DATOS
 */
 void inicializar_vector(int *v, int n, int a)
 {
@@ -29,6 +33,8 @@ void inicializar_vector(int *v, int n, int a)
 
 /*
 * DESCRIPCION
+* ---------------------------------------------------------------------------------------
+* DATOS
 */
 int buscar_en_vector(int *v, int n, int a)
 {
@@ -43,6 +49,8 @@ int buscar_en_vector(int *v, int n, int a)
 
 /*
 * DESCRIPCION
+* ---------------------------------------------------------------------------------------
+* DATOS
 */
 void imprimir_matriz(int **A, int n, int m, int formato)
 {
@@ -66,6 +74,8 @@ void imprimir_matriz(int **A, int n, int m, int formato)
 
 /*
 * DESCRIPCION
+* ---------------------------------------------------------------------------------------
+* DATOS
 */
 void imprimir_vector(int *v, int n)
 {

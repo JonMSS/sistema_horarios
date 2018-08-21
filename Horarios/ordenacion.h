@@ -1,6 +1,8 @@
 /*
 * DESCRIPCION
 * Procedimiento que ordena la matriz C en orden descendente respecto a las horas de cada curso mediante el algoritmo shell
+* ---------------------------------------------------------------------------------------
+* DATOS
 * int **A: matriz de 2xn para ordenar pespecto a la 2da fila
 * int intervalo: define el tamano de las particiones
 * int n: igual a n_cursos
@@ -43,6 +45,8 @@ void shell_cursos(int **A, int n)
 /*
 * DESCRIPCION
 * Procedimiento que extrae los cursos de cada trimestre guardados en la matriz C para ordenarlos usando shell_cursos
+* ---------------------------------------------------------------------------------------
+* DATOS
 * int **aux: es una matrix auxiliar que guarda los datos de los cursos de un determinado trimestre
 * int n_trim: cantidad de trimestres, definida en estructuras.h
 * int info_trim: matriz de 3xn_trim, con informacion de los trimestres, definida en estructuras.h

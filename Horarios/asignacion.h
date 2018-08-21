@@ -4,6 +4,8 @@
 /*
 * DESCRIPCION
 * Funcion que devuelve el indice del primer elemento mas pequeno mayor a cero
+* ---------------------------------------------------------------------------------------
+* DATOS
 * int i: contador
 * int menor: indice del primer elemento mas pequeno
 */
@@ -31,6 +33,8 @@ int menor(int a[], int n)
 * DESCRIPCION
 * Procedimiento que asigna los cursos del trimestre t a los profesores de tal menera que todos los profesores en P tengan la misma
   cantidad de cursos
+* ---------------------------------------------------------------------------------------
+* DATOS
 * int n_pc[n_cursos]: vector de n_cursos (ver estructuras.h) elementos que contiene la cantidad de profesores que podrían impartir cada curso
 * int gc[n_cursos]: vector de n_cursos (ver estructuras.h) elementos que contiene la cantidad de grupos por cada curso
 * int p[m_prof]: vector de m_prof (ver estructuras.h) elementos que contiene la cantidad de cursos que se le van asignando a cada profesor
@@ -124,6 +128,8 @@ int buscar_asignacion_PC(int index_curso)
 /*
 * DESCRIPCION
 * Metodo que restaura la matriz PC (ver estructuras.h) a su estado de solo asignacion profesor-curso (matriz de 1)
+* ---------------------------------------------------------------------------------------
+* DATOS
 */
 void restaurar_PC()
 {
@@ -140,6 +146,8 @@ void restaurar_PC()
 
 /*
 * DESCRIPCION
+* ---------------------------------------------------------------------------------------
+* DATOS
 */
 void obtener_D_prof(int index_prof, struct profesor *primero, int ***ptr_H)
 {
@@ -160,7 +168,8 @@ void obtener_D_prof(int index_prof, struct profesor *primero, int ***ptr_H)
 
 /*
 * DESCRIPCION
-* Funcion que devuelve el espacio disponible (para las matrices D y H al mismo tiempo) a partir de la fila (hora) i en la columna j (dia)
+* Funcion que devuelve el espacio disponible (para las matrices D y H al mismo tiempo) a partir de la fila (hora) i
+  en la columna j (dia)
 */
 int espacio(int **D, int **H, int i, int j)
 {
@@ -179,6 +188,8 @@ int espacio(int **D, int **H, int i, int j)
 
 /*
 * DESCRIPCION
+* ---------------------------------------------------------------------------------------
+* DATOS
 * int d: contador de dias en el horario (dia=0,1,2,3 y 4)
 * int i: contador para las horas en un determinado dia
 * int t: contador de trimestres
