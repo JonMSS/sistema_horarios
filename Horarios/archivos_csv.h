@@ -128,13 +128,13 @@ void leer_rutas()
     printf("\nVariables de rutas a archivos (ver archivo rutas_archivos)\n");
     abrir_archivo("rutas_csv","r");
     error=leer_cadena_archivo(&ruta_cursos_csv,f);
-    printf("\nruta_cursos_csv: %s",ruta_cursos_csv);
+    printf("\nruta_cursos_csv:\n %s",ruta_cursos_csv);
     error=leer_cadena_archivo(&ruta_profesores_csv,f);
-    printf("\nruta_profesores_csv: %s",ruta_profesores_csv);
+    printf("\nruta_profesores_csv:\n %s",ruta_profesores_csv);
     error=leer_cadena_archivo(&ruta_prof_cursos_csv,f);
-    printf("\nruta_prof_cursos_csv: %s",ruta_prof_cursos_csv);
+    printf("\nruta_prof_cursos_csv:\n %s",ruta_prof_cursos_csv);
     error=leer_cadena_archivo(&ruta_horario_csv,f);
-    printf("\nruta_horario_csv: %s\n",ruta_horario_csv);
+    printf("\nruta_horario_csv:\n %s\n",ruta_horario_csv);
     if(error==-1)
     {
         printf("\nleer_rutas: error al leer las rutas de los archivos");
@@ -491,5 +491,6 @@ void crear_horario_csv(struct horario *prim_h)
             prim_h=prim_h->siguiente;
         }//while
     }//if
+    printf("\nPlaneacion de horarios en el archivo:\n%s",ruta_horario_csv);
     cerrar_archivo();
 }

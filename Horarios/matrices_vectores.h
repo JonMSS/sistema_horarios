@@ -60,21 +60,67 @@ void imprimir_matriz(int **A, int n, int m, int formato)
 {
     int i,j;
     printf("\n");
+    if(formato==2)
+    {
+        printf("        ");
+        for(i=0;i<m;i++)
+        {
+            printf("%07d  ",C[0][i]);
+        }
+    }
+    printf("\n");
     for(i=0;i<n;i++)
     {
         for(j=0;j<m;j++)
         {
-            if(formato==1)
+            if(formato==0 || formato==2)
+            {
+                if(j==0 && formato==2)
+                    printf("%d  ",P[i]);
+                if(formato==2)
+                    printf("     ");
+                printf("%02d  ",A[i][j]);
+            }else if(formato==1)
             {
                 printf("%07d  ",A[i][j]);
-            }else
-            {
-                printf("%d  ",A[i][j]);
             }
         }
         printf("\n");
     }
 }
+/*
+void imprimir_matriz(int **A, int n, int m, int formato)
+{
+    int i,j;
+    printf("\n");
+    if(formato==2)
+    {
+        for(i=0;i<m;i++)
+        {
+            printf("%07d  ",C[0][i]);
+        }
+    }
+    printf("\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+
+            if(formato==0)
+            {
+                printf("%02d  ",A[i][j]);
+            }else if(formato==1)
+            {
+                printf("%07d  ",A[i][j]);
+            }else if(formato==2)
+            {
+                if(j==0)
+                    printf("%d  ",P[i]);
+                printf("%07d  ",A[i][j]);
+            }
+        printf("\n");
+    }
+}*/
 
 /*
 * DESCRIPCION

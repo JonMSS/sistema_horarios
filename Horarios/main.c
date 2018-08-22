@@ -5,6 +5,16 @@
 #include "ordenacion.h"
 #include "asignacion.h"
 
+int calcular_cursos_trim(int i)
+{
+    int sum=0, j;
+    for(j=0;j<i;j++)
+    {
+        sum+=T[2][j];
+    }
+    return n_cursos-sum;
+}
+
 int main()
 {
     int i;
@@ -24,12 +34,14 @@ int main()
 
     //Lectura de cursos desde el archivo csv
     printf("\nBuscando cursos...\n");
+    T[2][0]=0;
     for(i=0;i<n_trim;i++)
     {
         abrir_archivo(ruta_cursos_csv,"r");
         printf("\nAgregando cursos del trimestre %d\n",T[0][i]);
         insertar_curso_cola(T[0][i]);
-        T[2][i]=n_cursos;//cursos por trimestre
+        T[2][i]=calcular_cursos_trim(i);//cursos por trimestre
+        printf("\nT[2][%d]=%d\n",i,T[2][i]);
         printf("\nNumero de cursos del trimestre %d: %d\n",T[0][i],T[2][i]);
         cerrar_archivo();
     }
@@ -47,13 +59,18 @@ int main()
     printf("\n\nConjunto de cursos (matriz C)\n\n");
     memoria_matriz_int(&C,2,n_cursos);
     conjunto_cursos(primero_c);
+    for(i=0;i<n_cursos;i++)
+    {
+        printf("\n%d %d, ",C[0][i],C[1][i]);
+    }
     ordenar_cursos();
     printf("\nCursos ordenados\n");
     for(i=0;i<n_cursos;i++)
     {
         printf("\n%d %d, ",C[0][i],C[1][i]);
     }
-
+    getchar();
+    getchar();
     printf("\n\nConjunto de profesores P\n\n");
     memoria_vector_int(&P, m_prof);
     conjunto_profesores(primero_p);
@@ -65,14 +82,16 @@ int main()
     abrir_archivo(ruta_prof_cursos_csv,"r");
     leer_prof_cursos_csv();
     cerrar_archivo();
-    imprimir_matriz(PC,m_prof,n_cursos,0);
+    imprimir_matriz(PC,m_prof,n_cursos,2);
 
     printf("\nASIGNACION DE PROFESORES\n");
     asig_prof_c();
-    imprimir_matriz(PC,m_prof,n_cursos,0);
+    imprimir_matriz(PC,m_prof,n_cursos,2);
     printf("\n pc_ij=-1: profesor i-esimo no puede impartir curso j-esimo\n");
     printf("\n pc_ij=0: profesor i-esimo es candidato para impartir curso j-esimo\n");
     printf("\n pc_ij=1: profesor i-esimo impartira curso j-esimo\n");
+    getchar();
+    getchar();
 
     printf("\nASIGNACION DE HORARIOS FINAL\n");
     asignar_horario();

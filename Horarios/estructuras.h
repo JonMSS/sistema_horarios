@@ -74,7 +74,7 @@ struct curso
 * DATOS
 * int clave: clave numerica asignada a cada profesor
 * char *nombre: cadena con el nombre del profesor
-* int *D: matriz de disponibilidad de tamano numero de horas por numero de dias (5). La matriz
+* int *D: matriz de disponibilidad de tamano numero de horas (horarios de 8:00 a 14:00) por numero de dias (5). La matriz
   es 1 si el profesor esta disponible, -1 no esta disponible un dia completo (se asigna -1 a todo ese dia),
   0 no disponible
 * struct profesor *siguiente: apuntador al siguiente profesor para crear la cola
@@ -94,7 +94,7 @@ struct profesor
 * ---------------------------------------------------------------------------------------
 * DATOS
 * int trimestre: indice del trimestre al que pertence el horario y que se hace referencia en la matriz T
-* int **H: matriz de horarios de tamano numero de horas por numero de dias (5). En la matriz 0 no hay curso
+* int **H: matriz de horarios de tamano numero de horas (horarios de 8:00 a 14:00) por numero de dias (5). En la matriz 0 no hay curso
   asignado y distinto de cero (sera la clave de un curso) hay un curos asignado
 * struct horario *siguiente: apuntador al siguiente horario para crear la cola
 * ---------------------------------------------------------------------------------------
