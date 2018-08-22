@@ -10,6 +10,7 @@
 * struct horario *nuevo: puntero con la direccion del nuevo elemento para agragar a la cola
 * struct horario *primero_h: apuntador al primer elemento de la cola definido en estructuras.h
 * struct horario *ultimo_h: apuntador al ultimo elemento de la cola definido en estructuras.h
+* ---------------------------------------------------------------------------------------
 */
 void insertar_horario_cola(struct horario *nuevo)
 {
@@ -36,6 +37,7 @@ void insertar_horario_cola(struct horario *nuevo)
 * DATOS
 * int i: contador
 * int trim_aux: guarda el trimestre de las
+* ---------------------------------------------------------------------------------------
 */
 void conjunto_cursos(struct curso *primero)
 {
@@ -64,6 +66,7 @@ void conjunto_cursos(struct curso *primero)
 * struct profesor *primero: apuntador con la direccion del primer elemento de la cola de profesores
 * int i: contador
 * int m_prof: cantidad de profesores, definida en estructuras.h
+* ---------------------------------------------------------------------------------------
 */
 void conjunto_profesores(struct profesor *primero)
 {
@@ -89,6 +92,7 @@ void conjunto_profesores(struct profesor *primero)
 * ---------------------------------------------------------------------------------------
 * DATOS
 * struct curso *primero: apuntador con la direccion del primer elemento de la cola de cursos
+* ---------------------------------------------------------------------------------------
 */
 void imprimir_cursos(struct curso *primero)
 {
@@ -112,6 +116,7 @@ void imprimir_cursos(struct curso *primero)
 * ---------------------------------------------------------------------------------------
 * DATOS
 * struct profesor *primero: apuntador con la direccion del primer elemento de la cola de profesores
+* ---------------------------------------------------------------------------------------
 */
 void imprimir_profesores(struct profesor *primero)
 {
@@ -145,6 +150,7 @@ void imprimir_profesores(struct profesor *primero)
 * ---------------------------------------------------------------------------------------
 * DATOS
 * struct horario *primero: apuntador con la direccion del primer elemento de la cola de horarios
+* ---------------------------------------------------------------------------------------
 */
 void imprimir_horarios(struct horario *primero)
 {
@@ -186,6 +192,7 @@ void imprimir_horarios(struct horario *primero)
 * int clave: clave del curso que se esta buscando
 * struct curso *primero: apuntador con la direccion del primer elemento de la cola de cursos
 * struct curso **c_aux: apuntador a apuntador que tendra la direccion del elemento que se busca en la cola
+* ---------------------------------------------------------------------------------------
 */
 int buscar_curso_cola(int clave, struct curso *primero, struct curso **c_aux)
 {
@@ -216,6 +223,7 @@ int buscar_curso_cola(int clave, struct curso *primero, struct curso **c_aux)
 * int indice_profesor_cola: busca al profesor de acuerdo a su posicion en el vector P
 * struct profesor *primero: apuntador con la direccion del primer elemento de la cola de cursos
 * struct profesor **p_aux: apuntador a apuntador que tendra la direccion del elemento que se busca en la cola
+* ---------------------------------------------------------------------------------------
 */
 int buscar_profesor_cola(int indice_profesor, struct profesor *primero, struct profesor **p_aux)
 {

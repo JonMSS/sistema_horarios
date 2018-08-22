@@ -1,9 +1,9 @@
-//FUNCIONES PARA VECTORES Y MATRICES
+//FUNCIONES PARA VECTORES Y MATRICES DE ENTEROS
 
 /*
 * DESCRIPCION
+* Procedimiento que iniciliza con un valor a una matriz A de enteros de tamano nxm
 * ---------------------------------------------------------------------------------------
-* DATOS
 */
 void inicializar_matriz(int **A, int n, int m, int a)
 {
@@ -19,6 +19,7 @@ void inicializar_matriz(int **A, int n, int m, int a)
 
 /*
 * DESCRIPCION
+* Procedimiento que iniciliza con un valor a un vector v de enteros de tamano n
 * ---------------------------------------------------------------------------------------
 * DATOS
 */
@@ -33,8 +34,8 @@ void inicializar_vector(int *v, int n, int a)
 
 /*
 * DESCRIPCION
+* Procedimiento que busca en un vector de enteros de tamano n el valor a
 * ---------------------------------------------------------------------------------------
-* DATOS
 */
 int buscar_en_vector(int *v, int n, int a)
 {
@@ -49,8 +50,11 @@ int buscar_en_vector(int *v, int n, int a)
 
 /*
 * DESCRIPCION
+* Procemiento que imprime el contenido de una matriz A de enteros de tamano nxm en dos
+  formas:
+  1: formato para imprimir horarios
+  distinto de 1: formato general
 * ---------------------------------------------------------------------------------------
-* DATOS
 */
 void imprimir_matriz(int **A, int n, int m, int formato)
 {
@@ -74,8 +78,8 @@ void imprimir_matriz(int **A, int n, int m, int formato)
 
 /*
 * DESCRIPCION
+* Procedimiento que imprime el contenido de un vector v de enteros de tamano n
 * ---------------------------------------------------------------------------------------
-* DATOS
 */
 void imprimir_vector(int *v, int n)
 {

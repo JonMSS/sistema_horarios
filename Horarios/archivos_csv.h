@@ -155,6 +155,7 @@ void leer_rutas()
 * int trim: trimestre de los cursos que se guardaran y planificaran
 * char *s: cadena de tamano n perteneciente a una linea del archivo csv (*f)
 * char *ptr: puntero a subcadena de s delimitada por ","
+* ---------------------------------------------------------------------------------------
 */
 int leer_curso_csv(struct curso *c, int trim)
 {
@@ -207,6 +208,7 @@ int leer_curso_csv(struct curso *c, int trim)
 * ---------------------------------------------------------------------------------------
 * DATOS
 * int trimestre: trimestre del curso que se desea agregar a la cola
+* ---------------------------------------------------------------------------------------
 */
 void insertar_curso_cola(int trimestre)
 {
@@ -247,6 +249,7 @@ void insertar_curso_cola(int trimestre)
 * char *s: cadena de tamano n perteneciente a una linea del archivo csv
 * char *ptr: puntero a subcadena de s delimitada por ","
 * int i,j: contadores
+* ---------------------------------------------------------------------------------------
 */
 int leer_profesor_csv(struct profesor *p)
 {
@@ -326,6 +329,7 @@ void insertar_profesor_cola()
 * int c: clave de curso
 * int i_p: indice del profesor p en el vector P (ver estructuras.h)
 * int j_c: indice del curso c en la matriz C (ver estructuras.h)
+* ---------------------------------------------------------------------------------------
 */
 void leer_prof_cursos_csv()
 {
@@ -376,6 +380,7 @@ int indice_to_horas(int indice_hora)
 * DATOS
 * int hora_i: hora
 * char hora_s[6]: cadena con hora_i en formato de hora
+* ---------------------------------------------------------------------------------------
 */
 void formato_hora(int hora_i, char hora_s[6])
 {
@@ -395,6 +400,7 @@ void formato_hora(int hora_i, char hora_s[6])
 * int inicio: indica el comienzo en horas de la imparticion de un curso
 * int fin: indice el final en horas de la imparticion de un curso
 * int hora[6]: guarda la cadena de una hora con formato hh:mm
+* ---------------------------------------------------------------------------------------
 */
 void horario_curso(char horario[60], int clave_curso, int **H)
 {
@@ -446,6 +452,7 @@ void horario_curso(char horario[60], int clave_curso, int **H)
 * struct curso *curso: apuntador al curso (C[0][i_c]) actual
   (necesario para descargar todos los datos del curso en el archivo .csv del horario)
 * struct profesor *prof: apuntador al profesor (P[i_p]) que imparte el curso C[0][i_c]
+* ---------------------------------------------------------------------------------------
 */
 void crear_horario_csv(struct horario *prim_h)
 {

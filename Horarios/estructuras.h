@@ -2,6 +2,7 @@
 #define ESTRUCTURAS_H
 
 /*
+* DATOS
 * int **C: matriz de cursos de 2xn_cursos; C[0][i] son las claves de los cursos y C[1][i] son las horas de cada curso
 * int *P: vector de profesores (solo claves) de longitud m_prof
 * int **T: matriz de 3xn_trim con informacion de cada trimestre; T[0][i]: trimestres,
@@ -19,6 +20,7 @@
   del horario
 * struct curso *primero_c: apuntador al primer elemento de la cola
 * struct curso *ultimo_c: apuntador al ultimo elemento de la cola
+* ---------------------------------------------------------------------------------------
 */
 int **C=NULL;
 int *P=NULL;
@@ -46,6 +48,7 @@ char *ruta_horario_csv;
 * char *seriacion: dependencia contros cursos en el plan de estudios
 * int trimestre: trimestre al que pertence el curso
 * struct curso *siguiente: apuntador al siguiente curso para crear la cola
+* ---------------------------------------------------------------------------------------
 */
 struct curso
 {
@@ -69,6 +72,7 @@ struct curso
   es 1 si el profesor esta disponible, -1 no esta disponible un dia completo (se asigna -1 a todo ese dia),
   0 no disponible
 * struct profesor *siguiente: apuntador al siguiente profesor para crear la cola
+* ---------------------------------------------------------------------------------------
 */
 struct profesor
 {
@@ -87,6 +91,7 @@ struct profesor
 * int **H: matriz de horarios de tamano numero de horas por numero de dias (5). En la matriz 0 no hay curso
   asignado y distinto de cero (sera la clave de un curso) hay un curos asignado
 * struct horario *siguiente: apuntador al siguiente horario para crear la cola
+* ---------------------------------------------------------------------------------------
 */
 struct horario
 {

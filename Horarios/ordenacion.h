@@ -8,6 +8,7 @@
 * int n: igual a n_cursos
 * int i,j,k: contadores
 * int aux_c, aux_h: auxiliares para intercambiar los valores en la matriz C
+* ---------------------------------------------------------------------------------------
 */
 void shell_cursos(int **A, int n)
 {
@@ -53,6 +54,7 @@ void shell_cursos(int **A, int n)
 * int i: contador de trimestres (<n_trim)
 * int j: contador de cursos (<n_cursos)
 * int k: contador de cursos (k<=j<n_cursos)
+* ---------------------------------------------------------------------------------------
 */
 void ordenar_cursos()
 {

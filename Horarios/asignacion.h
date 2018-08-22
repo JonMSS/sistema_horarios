@@ -8,6 +8,7 @@
 * DATOS
 * int i: contador
 * int menor: indice del primer elemento mas pequeno
+* ---------------------------------------------------------------------------------------
 */
 int menor(int a[], int n)
 {
@@ -38,6 +39,7 @@ int menor(int a[], int n)
 * int n_pc[n_cursos]: vector de n_cursos (ver estructuras.h) elementos que contiene la cantidad de profesores que podrían impartir cada curso
 * int gc[n_cursos]: vector de n_cursos (ver estructuras.h) elementos que contiene la cantidad de grupos por cada curso
 * int p[m_prof]: vector de m_prof (ver estructuras.h) elementos que contiene la cantidad de cursos que se le van asignando a cada profesor
+* ---------------------------------------------------------------------------------------
 */
 void asig_prof_c()
 {
@@ -109,6 +111,7 @@ void asig_prof_c()
 /*
 * DESCRIPCION
 * Funcion que busca en la matriz PC (ver estructuras.h) uno de los profesores asignados al curso index_curso
+* ---------------------------------------------------------------------------------------
 */
 int buscar_asignacion_PC(int index_curso)
 {
@@ -170,6 +173,7 @@ void obtener_D_prof(int index_prof, struct profesor *primero, int ***ptr_H)
 * DESCRIPCION
 * Funcion que devuelve el espacio disponible (para las matrices D y H al mismo tiempo) a partir de la fila (hora) i
   en la columna j (dia)
+* ---------------------------------------------------------------------------------------
 */
 int espacio(int **D, int **H, int i, int j)
 {
@@ -208,6 +212,7 @@ int espacio(int **D, int **H, int i, int j)
   tiene espacio mayor al necesario (<=4) que se puede considerar para asignar en caso de que los demas dias
 * no tengan el espacio necesario exacto, es decir, flexibiliza el criterio de asignar en dias con espacio exacto
 * int **D_aux: matriz que contiene las restricciones de disponibilidad por dia y por horas del profesor k_p
+* ---------------------------------------------------------------------------------------
 */
 void asignar_horario()
 {
