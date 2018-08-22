@@ -145,6 +145,27 @@ void leer_rutas()
 
 /*
 * DESCRIPCION
+* Funcion que calcula la cantidad de cursos por cada trimestre conforme se van leyendo
+  los cursos del archivo csv
+* ---------------------------------------------------------------------------------------
+* DATOS
+* int t: trimestre (indice en T) del que se desea calcular la cantidad de cursos
+* int sum: total de cursos del trimestre 0 (indice en T) al trimestre t-1
+* int j: contador
+* ---------------------------------------------------------------------------------------
+*/
+int calcular_cursos_trim(int t)
+{
+    int sum=0, j;
+    for(j=0;j<t;j++)
+    {
+        sum+=T[2][j];
+    }
+    return n_cursos-sum;
+}
+
+/*
+* DESCRIPCION
 * Funcion que lee los cursos de un trimestre determinado en el archivo csv *f y los guarda en una
   estructura curso
 * NOTA IMPORTANTE: se asume que los cursos en el archivo csv de cursos estan ordenados

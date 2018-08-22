@@ -5,16 +5,6 @@
 #include "ordenacion.h"
 #include "asignacion.h"
 
-int calcular_cursos_trim(int i)
-{
-    int sum=0, j;
-    for(j=0;j<i;j++)
-    {
-        sum+=T[2][j];
-    }
-    return n_cursos-sum;
-}
-
 int main()
 {
     int i;
@@ -34,14 +24,13 @@ int main()
 
     //Lectura de cursos desde el archivo csv
     printf("\nBuscando cursos...\n");
-    T[2][0]=0;
+    T[2][0]=0; //se debe inicializar para calcular la cantidad de cursos por trimestre
     for(i=0;i<n_trim;i++)
     {
         abrir_archivo(ruta_cursos_csv,"r");
         printf("\nAgregando cursos del trimestre %d\n",T[0][i]);
         insertar_curso_cola(T[0][i]);
         T[2][i]=calcular_cursos_trim(i);//cursos por trimestre
-        printf("\nT[2][%d]=%d\n",i,T[2][i]);
         printf("\nNumero de cursos del trimestre %d: %d\n",T[0][i],T[2][i]);
         cerrar_archivo();
     }
