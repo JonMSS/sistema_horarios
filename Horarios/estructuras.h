@@ -3,7 +3,9 @@
 
 /*
 * DATOS
-* int **C: matriz de cursos de 2xn_cursos; C[0][i] son las claves de los cursos y C[1][i] son las horas de cada curso
+* int **C: matriz de cursos de 2xn_cursos; C[0][i] son las claves de los cursos y C[1][i] son las horas de cada curso.
+  En esta matriz estan los cursos de todos los trimestres que se planificaran, la cantidad de cursos por trimestre se
+  encuentra en la matriz T para manipular los cursos por cada trimestre.
 * int *P: vector de profesores (solo claves) de longitud m_prof
 * int **T: matriz de 3xn_trim con informacion de cada trimestre; T[0][i]: trimestres,
   T[1][i]: informacion de grupos por trimestre, T[2][i]: cantidad de cursos por trimestre
@@ -18,8 +20,12 @@
   profesor-curso
 * char *ruta_horario_csv: cadena con la ruta para guardar archivo csv que contiene los datos de la version preliminar
   del horario
-* struct curso *primero_c: apuntador al primer elemento de la cola
-* struct curso *ultimo_c: apuntador al ultimo elemento de la cola
+* struct curso *primero_c: apuntador al primer elemento de la cola de cursos
+* struct curso *ultimo_c: apuntador al ultimo elemento de la cola de cursos
+* struct curso *primero_p: apuntador al primer elemento de la cola de profesores
+* struct curso *ultimo_p: apuntador al ultimo elemento de la cola de profesores
+* struct curso *primero_h: apuntador al primer elemento de la cola de horarios
+* struct curso *ultimo_h: apuntador al ultimo elemento de la cola de horarios
 * ---------------------------------------------------------------------------------------
 */
 int **C=NULL;

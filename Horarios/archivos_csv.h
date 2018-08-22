@@ -15,6 +15,7 @@ FILE* f;
 * VARIABLES Y ESTRUCTURAS DEFINIDAS EN estructuras.h
 * struct curso
 * struct profesor
+* struct horario
 * int **C
 * int *P
 * int **T

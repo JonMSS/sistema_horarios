@@ -3,13 +3,35 @@
 //FUNCIONES PARA COLAS
 
 /*
+* VARIABLES Y ESTRUCTURAS DEFINIDAS EN estructuras.h
+* struct curso
+* struct profesor
+* struct horario
+* int **C
+* int *P
+* int **T
+* int **PC
+* int n_cursos
+* int m_prof
+* int n_trim
+* char *ruta_cursos_csv
+* char *ruta_profesores_csv
+* char *ruta_prof_cursos_csv
+* char *ruta_horario_csv
+* struct curso *primero_c
+* struct curso *ultimo_c
+* struct curso *primero_p
+* struct curso *ultimo_p
+* struct curso *primero_h
+* struct curso *ultimo_h
+*/
+
+/*
 * DESCRIPCION
-* Procedimiento que crea un elemento de tipo struct horario y lo agrega a la cola
+* Procedimiento que crea un elemento de tipo struct horario y lo agrega a la cola de horaios
 * ---------------------------------------------------------------------------------------
 * DATOS
 * struct horario *nuevo: puntero con la direccion del nuevo elemento para agragar a la cola
-* struct horario *primero_h: apuntador al primer elemento de la cola definido en estructuras.h
-* struct horario *ultimo_h: apuntador al ultimo elemento de la cola definido en estructuras.h
 * ---------------------------------------------------------------------------------------
 */
 void insertar_horario_cola(struct horario *nuevo)
@@ -31,12 +53,12 @@ void insertar_horario_cola(struct horario *nuevo)
 
 /*
 * DESCRIPCION
-* Procedimiento que guarda las claves de los cursos y sus horas en la matriz C de 2xn_cursos desde la cola de cursos
-* struct curso *primero: apuntador con la direccion del primer elemento de la cola de cursos
+* Procedimiento que guarda las claves de los cursos y sus horas en la matriz C
+  (ver estructuras.h) desde la cola de cursos
 * ---------------------------------------------------------------------------------------
 * DATOS
+* struct curso *primero: apuntador con la direccion del primer elemento de la cola de cursos
 * int i: contador
-* int trim_aux: guarda el trimestre de las
 * ---------------------------------------------------------------------------------------
 */
 void conjunto_cursos(struct curso *primero)
@@ -60,12 +82,11 @@ void conjunto_cursos(struct curso *primero)
 
 /*
 * DESCRIPCION
-* Procedimiento que guarda las claves de los profesores
+* Procedimiento que guarda las claves de los profesores en el vector P (ver estructuras.h)
 * ---------------------------------------------------------------------------------------
 * DATOS
 * struct profesor *primero: apuntador con la direccion del primer elemento de la cola de profesores
 * int i: contador
-* int m_prof: cantidad de profesores, definida en estructuras.h
 * ---------------------------------------------------------------------------------------
 */
 void conjunto_profesores(struct profesor *primero)
@@ -88,7 +109,7 @@ void conjunto_profesores(struct profesor *primero)
 
 /*
 * DESCRIPCION
-* Procedimiento que imprime todos los cursos que se encuentran en la cola de cursos
+* Procedimiento que imprime todos los cursos con sus datos que se encuentran en la cola de cursos
 * ---------------------------------------------------------------------------------------
 * DATOS
 * struct curso *primero: apuntador con la direccion del primer elemento de la cola de cursos
@@ -186,12 +207,14 @@ void imprimir_horarios(struct horario *primero)
 /*
 * DESCRIPCION
 * Funcion que busca un curso en la cola de cursos,
-  si no encuentra el curso con la clave "clave" devuelve -1, si lo encuentra pasa su direccion a c_aux
+  si no encuentra el curso con la clave "clave" devuelve -1, si lo encuentra pasa su
+  direccion al apuntador c_aux
 * ---------------------------------------------------------------------------------------
 * DATOS
 * int clave: clave del curso que se esta buscando
 * struct curso *primero: apuntador con la direccion del primer elemento de la cola de cursos
-* struct curso **c_aux: apuntador a apuntador que tendra la direccion del elemento que se busca en la cola
+* struct curso **c_aux: apuntador a apuntador que tendra la direccion del
+  elemento que se busca en la cola
 * ---------------------------------------------------------------------------------------
 */
 int buscar_curso_cola(int clave, struct curso *primero, struct curso **c_aux)
@@ -217,7 +240,8 @@ int buscar_curso_cola(int clave, struct curso *primero, struct curso **c_aux)
 /*
 * DESCRIPCION
 * Funcion que busca un profesor en la cola de profesores,
-  si no encuentra el curso con la clave "clave" devuelve -1, si lo encuentra pasa su direccion a p_aux
+  si no encuentra el curso con la clave "clave" devuelve -1, si lo encuentra pasa su
+  direccion al apuntador p_aux
 * ---------------------------------------------------------------------------------------
 * DATOS
 * int indice_profesor_cola: busca al profesor de acuerdo a su posicion en el vector P
